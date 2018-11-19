@@ -1,22 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-import {createStore, applyMiddleware} from 'redux';
-import {createLogger} from 'redux-logger';
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
+import createSagaMiddleware from 'redux-saga';
+import  searchSaga from './sagas/search';
+ import reducer from './reducers/search'
+ import { Provider } from 'react-redux';
 
-// import reducer from './reducers';
-import { provider } from 'react-redux';
+const logger = createLogger();
+const sagas = createSagaMiddleware();
 
 const store = createStore(
-    () => ({}),
-    createLogger
+    reducer,
+    applyMiddleware(logger, sagas)
 );
 
+sagas.run(searchSaga);
+
 ReactDOM.render(
-    <provider store={store} > <App /> </provider>  , 
+    <Provider store={store}><App /></Provider>,
     document.getElementById('root')
 );
 

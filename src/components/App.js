@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
-import SearchForm from './components/search-form/search-form';
-import SearchResults from './components/search-results/search-results';
+import SearchForm from './search-form/search-form.container';
+import SearchResults from './search-results/search-results.container';
 
 const results = [
   {
@@ -29,20 +29,6 @@ const results = [
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      results: [],
-    }
-  }
-
-   searchPerformed = (searchText => {
-    this.setState({
-      results : results,             
-    });
-    console.log("App.js: search performed " + searchText);
-  });
-
   render() {
     return (
       <div className="App">
@@ -51,12 +37,10 @@ class App extends Component {
           <h2 className="App-header-text">Star Wars Character Search</h2>
         </div>
         <div> 
-          <SearchForm onSearchSubmitted={this.searchPerformed}/>
-          <SearchResults results={this.state.results}/>
-        
+          <SearchForm />
+          <SearchResults />
         </div>
       </div>
-
     );
   }
 }
