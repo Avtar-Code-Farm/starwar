@@ -1,17 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import * as CustomTypes from '../../model/starwar-character'
 
-export default function SearchResult ({result}) {
+export default function SearchResult ({result, onResultSelected}) {
     console.log("result " + JSON.stringify(result));
-    
+    let resultTextControl = null;
+    const onResultClick= (e) => {
+        console.log("resultTextControl: " + resultTextControl.value);
+        onResultSelected(result);
+    }
+
     const {name} = result;
     return (
-        <div>
-            <label>{name}</label>
+        <div >
+            <input  value={name} 
+                ref={(e) => resultTextControl = e}
+                onClick={onResultClick} />
+            <label>-----------------</label>
         </div>        
     );
 }
 
 SearchResult.PropTypes = {
     results: CustomTypes.SearchResult,
+    onResultSelected: PropTypes.func.isRequired,
 }

@@ -18,10 +18,12 @@ export default function SearchForm ({ onSearchSubmitted }) {
     }
 
     return (
-        <div>
+        <div  >
             <h6 className="Search-info-text">Search for your favorite Star Wars Character in the search box below. Click on thier name to find out more information about them</h6>
-            <h3 className="Search-info-text">Search:</h3>            
-            <input className="Search-input-text" ref={(e) => searchField = e} type="text" onKeyUp={searchSubmitted} placeholder="Type actor name.." />                
+            <h3 className="Search-info-text">Search:</h3>    
+            <div >
+                <input className="searchField" ref={(e) => searchField = e} type="text" onKeyUp={searchSubmitted} placeholder="Type actor name.." />                
+            </div>        
             
         </div>
     )

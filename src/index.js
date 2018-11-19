@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import  searchSaga from './sagas/search';
- import reducer from './reducers/search'
+ import reducer from './reducers';
  import { Provider } from 'react-redux';
 
 const logger = createLogger();

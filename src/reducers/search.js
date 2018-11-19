@@ -5,7 +5,6 @@ const initialState = {
 };
 
 function searchTransform(rawResult) {
-    const {results} = rawResult;
     console.log("Search Transform result: " + JSON.stringify(rawResult));
     return {
         name: rawResult.name,

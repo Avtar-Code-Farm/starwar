@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import './App.css';
 import SearchForm from './search-form/search-form.container';
 import SearchResults from './search-results/search-results.container';
+import StarDisplay from './star-display/star-display.container';
 
 const results = [
   {
@@ -39,6 +40,7 @@ class App extends Component {
         <div> 
           <SearchForm />
           <SearchResults />
+          <StarDisplay />
         </div>
       </div>
     );

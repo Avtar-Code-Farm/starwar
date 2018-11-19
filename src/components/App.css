@@ -53,3 +53,33 @@
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.searchField {
+  font-size: 16px;
+  width: 400px;
+  border: none;
+  background-color: whitesmoke;
+  padding: 10px;
+  color: #3D315B;
+}
+
+.searchField:focus {
+  border: 3px solid blue;
+}
+
+
+.resultText {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 5px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  pointer-events: none;
+}
+
+.resultText:focus {
+  border: 3px solid blue;
+ }

@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import * as CustomTypes from '../../model/starwar-character';
 import SearchResult from '../search-result/search-result';
 
- export default function SearchResults ({results}) {
+ export default function SearchResults ({results, onResultSelected}) {
+
+
+
      console.log("search-result component" + JSON.stringify(results));
      if(results) {
         return (
             <div>
                 <div>
-                    {results.map((item) => <SearchResult result={item}/>)}
+                
+                    {results.map((item) => <SearchResult result={item} onResultSelected={onResultSelected}/>)}
                 </div>
             </div>
         ); 
@@ -22,5 +26,6 @@ import SearchResult from '../search-result/search-result';
  }
 
  SearchResults.propTypes = { 
-     results: PropTypes.arrayOf(CustomTypes.SearchResult),      
+     results: PropTypes.arrayOf(CustomTypes.SearchResult),
+     onResultSelected: PropTypes.func.isRequired,      
  }
