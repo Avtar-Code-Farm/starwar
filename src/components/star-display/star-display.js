@@ -4,6 +4,7 @@ import styles from './star-display.css';
 import * as CustomTypes from '../../model/starwar-character'
 
 export default function StarDisplay ({ isShown, star }) {
+
     if(isShown){
         return (
             <div className={styles.container}>

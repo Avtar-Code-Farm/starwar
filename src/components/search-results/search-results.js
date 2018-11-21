@@ -12,15 +12,19 @@ import SearchResult from '../search-result/search-result';
         return (
             <div>
                 <div>
-                
+                    <h3 className="Search-info-text">Characters:</h3>
                     {results.map((item) => <SearchResult result={item} onResultSelected={onResultSelected}/>)}
                 </div>
             </div>
         ); 
      }
      else {
+        onResultSelected(null);
          return (
-             <div></div>
+             <div>
+                 <h3 className="Search-info-text">Characters:</h3>
+                 <div class="loader"></div>
+             </div>
          );
      }
  }

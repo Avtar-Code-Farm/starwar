@@ -13,10 +13,9 @@ export default function SearchResult ({result, onResultSelected}) {
     const {name} = result;
     return (
         <div >
-            <input  value={name} 
+            <input className="resultText"  value={name} 
                 ref={(e) => resultTextControl = e}
                 onClick={onResultClick} />
-            <label>-----------------</label>
         </div>        
     );
 }
