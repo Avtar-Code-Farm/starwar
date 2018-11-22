@@ -7,7 +7,7 @@ body {
     overflow-x: hidden;
 }
 
-html,body {
+html, body {
     padding: 0;
     margin: 0;
     color: #ebebeb;
@@ -31,7 +31,7 @@ html,body {
     z-index: 10;
     height: 100px;
     background-color: #222;
-}   
+}
 
 .Container {
     display: -webkit-box;
@@ -49,7 +49,7 @@ html,body {
     will-change: overflow;
 }
 
-.mainContent,.Right {
+.mainContent, .Right {
     overflow: auto;
     height: auto;
     padding: .5rem;
@@ -63,11 +63,11 @@ html,body {
     -ms-flex: 1;
     flex: 1;
     width: 70%;
-    text-align:center; 
+    text-align: center;
 }
 
 .Right {
     width: 30%;
     background-color: lightgray;
-    text-align:left; 
+    text-align: left;
 }

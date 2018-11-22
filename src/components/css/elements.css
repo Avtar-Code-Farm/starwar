@@ -1,4 +1,3 @@
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 10vmin;
@@ -8,13 +7,14 @@
 .App-header {
   background-color: #222;
   color: white;
-  display:inline-block
+  display: inline-block
 }
 
 .App-header-text {
   color: white;
   font-size: 28px;
   float: left;
+  margin-top: 10px;
 }
 
 @keyframes App-logo-spin {
@@ -26,15 +26,15 @@
   }
 }
 
-.Search-info-text { 
-  font-weight: bold;  
+.Search-info-text {
+  font-weight: bold;
   color: black;
-  margin: 2px; 
+  margin: 2px;
 }
 
-.Search-info-text-small{
+.Search-info-text-small {
   color: black;
-  margin: 2px; 
+  margin: 2px;
 }
 
 .searchField {
@@ -46,7 +46,6 @@
   color: #3D315B;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  
 }
 
 .searchField:focus {
@@ -67,35 +66,41 @@
 
 .resultText:focus {
   border: 4px solid blue;
- }
+}
 
 .rightContent {
-  margin-top:30px;
-  text-align:left;
+  margin-top: 30px;
+  text-align: left;
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
   border-radius: 50%;
   width: 40px;
-  height: 40px; 
+  height: 40px;
   animation: spin 2s linear infinite;
   margin: auto;
-  text-align:center; 
+  text-align: center;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .displayRecordContainer {
   padding: 10px;
-  overflow:auto;
+  overflow: auto;
 }
 
-.displayRecordHeaderContainer{
+.displayRecordHeaderContainer {
   margin-bottom: 15px
 }
 
@@ -105,19 +110,18 @@
   letter-spacing: 0.0625em;
 }
 
-.displayRecordLabelHeading{
+.displayRecordLabelHeading {
   color: black;
   font-size: 18px;
   letter-spacing: 0.0625em;
   padding-bottom: 15px;
-  
 }
 
 .displayRecordText {
   color: black;
   widows: 20px;
-  display:block;
-  text-align:left;
+  display: block;
+  text-align: left;
   font-size: 12px;
   padding-left: 40px;
   letter-spacing: 0.0625em;
