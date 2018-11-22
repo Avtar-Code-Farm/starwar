@@ -1,30 +1,82 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './star-display.css';
 import * as CustomTypes from '../../model/starwar-character'
 
 export default function StarDisplay ({ isShown, star }) {
 
     if(isShown){
         return (
-            <div className={styles.container}>
-                <div>
-                    <span>Name: </span> <span>{star.name}</span>
+            <div className="displayRecordContainer">
+                <div className="displayRecordHeaderContainer">
+                    <strong>
+                        <label className="displayRecordLabelHeading">
+                            {star.name}
+                        </label>
+                    </strong>
                 </div>
                 <div>
-                    <span>Name: </span> <span>{star.hair_color}</span>
+                    <strong>
+                        <label className="displayRecordLabel">
+                            Hair Color
+                        </label>
+                    </strong>
                 </div>
                 <div>
-                    <span>Name: </span> <span>{star.skin_color}</span>
+                    <label className="displayRecordText">
+                        {star.hair_color}
+                    </label>
+                </div>
+
+                <div>
+                    <strong>
+                        <label className="displayRecordLabel">
+                            Skin Color
+                        </label>
+                    </strong>
                 </div>
                 <div>
-                    <span>Name: </span> <span>{star.eye_color}</span>
+                    <label className="displayRecordText">
+                        {star.skin_color}
+                    </label>
+                </div>
+
+                <div>
+                <strong>
+                    <label className="displayRecordLabel">
+                        Eye Color
+                    </label>
+                </strong>
                 </div>
                 <div>
-                    <span>Name: </span> <span>{star.birth_year}</span>
+                    <label className="displayRecordText">
+                        {star.eye_color}
+                    </label>
+                </div>
+
+                <div>
+                <strong>
+                    <label className="displayRecordLabel">
+                        Birth Year
+                    </label>
+                </strong>
                 </div>
                 <div>
-                    <span>Name: </span> <span>{star.gender}</span>
+                    <label className="displayRecordText">
+                        {star.birth_year}
+                    </label>
+                </div>
+
+                <div>
+                <strong>
+                <label className="displayRecordLabel">
+                    Gender
+                </label>
+                </strong>
+                </div>
+                <div>
+                    <label className="displayRecordText">
+                        {star.gender}
+                    </label>
                 </div>
             </div>
         );
