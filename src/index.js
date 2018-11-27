@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 import { createStore, applyMiddleware } from 'redux';
@@ -10,6 +9,7 @@ import createSagaMiddleware from 'redux-saga';
 import searchSaga from './sagas/search';
 import reducer from './reducers';
 import { Provider } from 'react-redux';
+import App from './components/app';
 
 const logger = createLogger();
 const sagas = createSagaMiddleware();

@@ -12,8 +12,8 @@ export default function SearchForm({ onSearchSubmitted }) {
     }
 
     clearTimeout(timeout);
-    // Make a new timeout; set to go off in 500ms
-    // this will avoid making make service call on every input character in textbox
+    //this will avoid making  service call on every input character in textbox
+    // added 500ms delay for user to complete the typing
     timeout = setTimeout(function() {
       onSearchSubmitted(searchField.value);
     }, 500);
@@ -21,14 +21,14 @@ export default function SearchForm({ onSearchSubmitted }) {
 
   return (
     <div>
-      <h6 className="Search-info-text-small">
+      <h6 className="__starwar__Search-info-text-small">
         Search for your favorite Star Wars Character in the search box below.
         Click on thier name to find out more information about them.
       </h6>
-      <h3 className="Search-info-text">Search:</h3>
+      <h3 className="__starwar__Search-info-text">Search:</h3>
       <div>
         <input
-          className="searchField"
+          className="__starwar__searchField"
           ref={e => (searchField = e)}
           type="text"
           onKeyUp={searchSubmitted}

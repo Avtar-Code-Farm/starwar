@@ -2,58 +2,69 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as CustomTypes from '../../model/starwar-character';
 
+// functional component to display selected star world actor detail
 export default function StarDisplay({ isShown, star }) {
   if (isShown) {
     return (
-      <div className="displayRecordContainer">
-        <div className="displayRecordHeaderContainer">
+      <div className="__starwar__displayRecordContainer">
+        <div className="__starwar__displayRecordHeaderContainer">
           <strong>
-            <label className="displayRecordLabelHeading">{star.name}</label>
+            <label className="__starwar__displayRecordLabelHeading">
+              {star.name}
+            </label>
           </strong>
         </div>
         <div>
           <strong>
-            <label className="displayRecordLabel">Hair Color</label>
+            <label className="__starwar__displayRecordLabel">Hair Color</label>
           </strong>
         </div>
         <div>
-          <label className="displayRecordText">{star.hair_color}</label>
+          <label className="__starwar__displayRecordText">
+            {star.hair_color}
+          </label>
         </div>
 
         <div>
           <strong>
-            <label className="displayRecordLabel">Skin Color</label>
+            <label className="__starwar__displayRecordLabel">Skin Color</label>
           </strong>
         </div>
         <div>
-          <label className="displayRecordText">{star.skin_color}</label>
+          <label className="__starwar__displayRecordText">
+            {star.skin_color}
+          </label>
         </div>
 
         <div>
           <strong>
-            <label className="displayRecordLabel">Eye Color</label>
+            <label className="__starwar__displayRecordLabel">Eye Color</label>
           </strong>
         </div>
         <div>
-          <label className="displayRecordText">{star.eye_color}</label>
+          <label className="__starwar__displayRecordText">
+            {star.eye_color}
+          </label>
         </div>
 
         <div>
           <strong>
-            <label className="displayRecordLabel">Birth Year</label>
+            <label className="__starwar__displayRecordLabel">Birth Year</label>
           </strong>
         </div>
         <div>
-          <label className="displayRecordText">{star.birth_year}</label>
+          <label className="__starwar__displayRecordText">
+            {star.birth_year}
+          </label>
         </div>
 
         <div>
           <strong>
-            <label className="displayRecordLabel">Gender</label>
+            <label className="__starwar__displayRecordLabel">Gender</label>
           </strong>
         </div>
         <div>
-          <label className="displayRecordText">{star.gender}</label>
+          <label className="__starwar__displayRecordText">{star.gender}</label>
         </div>
       </div>
     );

@@ -13,7 +13,7 @@ html, body {
     color: #ebebeb;
 }
 
-.Top {
+.__top__content {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -33,7 +33,7 @@ html, body {
     background-color: #222;
 }
 
-.Container {
+.__app__container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -49,7 +49,7 @@ html, body {
     will-change: overflow;
 }
 
-.mainContent, .Right {
+.__main__content, .__main__content_right {
     overflow: auto;
     height: auto;
     padding: .5rem;
@@ -57,7 +57,7 @@ html, body {
     -ms-overflow-style: none;
 }
 
-.mainContent {
+.__main__content {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -66,7 +66,7 @@ html, body {
     text-align: center;
 }
 
-.Right {
+.__main__content_right {
     width: 30%;
     background-color: lightgray;
     text-align: left;

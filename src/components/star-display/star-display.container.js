@@ -1,3 +1,5 @@
+//this container helps to connect Star-Display component with Store and Store with Star-Display component
+// this will be called each time user select star war character from search-results
 import { connect } from 'react-redux';
 import StarDisplay from './star-display';
 

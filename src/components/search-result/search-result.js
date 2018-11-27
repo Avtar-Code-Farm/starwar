@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as CustomTypes from '../../model/starwar-character';
 
+// Component to return UI for each search result
 export default function SearchResult({ result, onResultSelected }) {
   console.log('result ' + JSON.stringify(result));
-  let resultTextControl = null;
   const onResultClick = e => {
-    console.log('resultTextControl: ' + resultTextControl.value);
+    console.log('I am called');
     onResultSelected(result);
   };
 
@@ -14,16 +14,15 @@ export default function SearchResult({ result, onResultSelected }) {
   return (
     <div>
       <input
-        className="resultText"
+        className="__starwar__resultText"
         value={name}
-        ref={e => (resultTextControl = e)}
         onClick={onResultClick}
       />
     </div>
   );
 }
 
-SearchResult.PropTypes = {
-  results: CustomTypes.SearchResult,
+SearchResult.propTypes = {
+  result: CustomTypes.SearchResult.isRequired,
   onResultSelected: PropTypes.func.isRequired,
 };
