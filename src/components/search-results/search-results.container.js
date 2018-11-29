@@ -27,6 +27,7 @@ function mapDispatchedFromProps(dispatch) {
   };
 }
 
+//Connects a SearchResults component to a Redux store
 export default connect(
   mapStateToProps,
   mapDispatchedFromProps
